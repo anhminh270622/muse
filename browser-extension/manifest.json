@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Muse Video Local Connector",
+  "version": "1.0.0",
+  "description": "Chuyển phiên Muse sang Muse Video Local khi bạn bấm Kết nối. Không mở cửa sổ.",
+  "permissions": ["cookies", "scripting"],
+  "host_permissions": ["https://muse.ai/*", "https://www.muse.ai/*"],
+  "background": {"service_worker": "background.js"},
+  "content_scripts": [{
+    "matches": ["http://127.0.0.1/*", "http://localhost/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }]
+}

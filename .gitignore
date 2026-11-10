@@ -1,0 +1,11 @@
+.venv/
+data/
+__pycache__/
+.pytest_cache/
+
+# Local configuration and generated projects
+.env
+.env.*
+!.env.example
+projects/
+*.py[cod]
